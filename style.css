@@ -169,6 +169,7 @@ h2{
 
 .bracket{
     overflow-x: auto; /*permite rolar horizontalmente */
+    justify-content: flex-start;
     gap: 40px;
     padding-bottom: 10px;
 }
