@@ -23,6 +23,8 @@ const nextMatch = {
 teams.forEach( team => {
     team.addEventListener ("click", () => {
 
+        console.log("Função de click acionada.");
+
         const matchElement = team.closest ( ".match" );
         const matchNumber = Number(matchElement.dataset.match);
 
@@ -32,8 +34,12 @@ teams.forEach( team => {
         //final
         if ( matchNumber === 15) {
             
+            console.log("Caiu no escopo de validação da final.");
+
             const championlogo = document.getElementById ( "champion-logo" );
             
+            console.log("Id do logo capturado.");
+
             const logo = team.querySelector ("img");
             if (championlogo && logo) { 
                 
@@ -56,4 +62,6 @@ teams.forEach( team => {
             nextTeams[position].innerHTML = team.innerHTML;
             
         });
+
+        console.log("Evento de click processado.");
 });
